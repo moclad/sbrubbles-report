@@ -1,26 +1,20 @@
 {
     "version": "0.4.1",
     "name": "jikji",
-    "workspaces": [
-        "packages/*",
-        "example",
-        "docs",
-        "tests/*"
-    ],
     "scripts": {
-        "sandbox": "yarn workspace @jikji/sandbox start",
-        "generator": "yarn workspace @jikji/generator start",
-        "docs": "yarn workspace @jikji/website start --port 3001",
-        "build": "yarn run build-react & yarn run build-generator",
-        "build-react": "yarn workspace @jikji/react build",
-        "test-react": "yarn workspace @jikji/react test",
-        "build-docs": "yarn workspace @jikji/website build",
-        "test-generator": "yarn workspace @jikji/generator test",
-        "build-generator": "yarn workspace @jikji/generator build",
-        "example": "yarn workspace example start",
-        "example-ssg": "yarn workspace example start-ssg"
+        "sandbox": "pnpm --filter @jikji/sandbox start",
+        "generator": "pnpm --filter @jikji/generator start",
+        "docs": "pnpm --filter @jikji/website start --port 3001",
+        "build": "pnpm run build-react & pnpm run build-generator",
+        "build-react": "pnpm --filter @jikji/react build",
+        "test-react": "pnpm --filter @jikji/react test",
+        "build-docs": "pnpm --filter @jikji/website build",
+        "test-generator": "pnpm --filter @jikji/generator test",
+        "build-generator": "pnpm --filter @jikji/generator build",
+        "example": "pnpm --filter example start",
+        "example-ssg": "pnpm --filter example start-ssg"
     },
-    "packageManager": "yarn@3.2.3",
+    "packageManager": "pnpm@10.18.3",
     "dependencies": {
         "eslint": "^8.33.0",
         "prettier": "^2.8.3",

@@ -5,7 +5,7 @@
   "main": "index.js",
   "keywords": [],
   "scripts": {
-    "test": "yarn dlx playwright test"
+    "test": "pnpm dlx playwright test"
   },
   "author": {
     "name": "Pejman Nikram"

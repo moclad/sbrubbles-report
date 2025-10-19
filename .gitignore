@@ -6,3 +6,8 @@
 !.yarn/sdks
 !.yarn/versions
 node_modules
+
+# pnpm
+node_modules
+.pnpm-store
+pnpm-lock.yaml
